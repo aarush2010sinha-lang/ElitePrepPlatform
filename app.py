@@ -150,17 +150,16 @@ def result():
         if conn:
             cur = conn.cursor()
             try:
-                for i in range(total):
-                    user_ans = user_answers.get(str(i))
-                                    if user_ans:  # Only check if user answered
-                    try:
-                        cur.execute("SELECT correct_answer FROM questions WHERE id = ?", (q_ids[i],))
-                        row = cur.fetchone()
-                        if row and user_ans == row['correct_answer']:
-                            score += 1
-                    except:
-                        pass  # Skip any DB error for this question, don't add to score
-            finally:
+                   for i in range(total):
+        user_ans = user_answers.get(str(i))
+        if user_ans:  # Only check if user answered
+            try:
+                cur.execute("SELECT correct_answer FROM questions WHERE id = ?", (q_ids[i],))
+                row = cur.fetchone()
+                if row and user_ans == row['correct_answer']:
+                    score += 1
+            except:
+                pass  # Skip any DB error for this question, don't add to score
                 try:
                     conn.close()
                 except:
@@ -173,3 +172,4 @@ def result():
         total = session.get('total', 0)
         session.clear()
         return render_template('result.html', score=0, total=total)
+
