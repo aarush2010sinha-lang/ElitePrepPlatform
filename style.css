@@ -1,0 +1,173 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ---------- BASE ---------- */
+body {
+    background: linear-gradient(120deg, #f4f7fb, #e9f0ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1f2937;
+}
+
+/* ---------- CARD ---------- */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1d4ed8;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------- FORM ---------- */
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 600;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+select:focus,
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ---------- BUTTON ---------- */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* ---------- QUESTION ---------- */
+.question-box {
+    margin-top: 10px;
+}
+
+.option {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: #eef2ff;
+    border-color: #2563eb;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+/* ---------- TIMER ---------- */
+.timer {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+/* ---------- RESULT ---------- */
+.score {
+    font-size: 26px;
+    text-align: center;
+    color: #16a34a;
+    margin-bottom: 20px;
+}
+
+.links a {
+    display: inline-block;
+    margin: 8px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width: 480px) {
+    .container {
+        border-radius: 0;
+        height: 100vh;
+        max-width: 100%;
+    }
+}

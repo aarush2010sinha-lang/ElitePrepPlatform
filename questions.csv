@@ -1,0 +1,22 @@
+question,option_a,option_b,option_c,option_d,correct_answer,grade,subject
+"LCM of 4 and 6?",12,24,6,18,A,5,Math
+"What is 5 × 7?",35,42,30,40,A,5,Math
+"Capital of India?",Delhi,Mumbai,Kolkata,Chennai,A,6,Geography
+"H₂O is?",Water,Oxygen,Hydrogen,Helium,A,7,Science
+"Largest planet?",Jupiter,Saturn,Earth,Mars,A,8,Science
+"What is 10 - 3?",6,7,8,9,B,5,Math
+"What is the square root of 16?",2,4,8,16,B,6,Math
+"Photosynthesis needs?",Sunlight,Water,CO2,All of the above,D,7,Science
+"Which is a prime number?",4,6,7,9,C,5,Math
+"Earth's rotation period?",24 hours,365 days,1 year,12 months,A,6,Geography
+"DNA stands for?",Deoxyribonucleic Acid,Ribonucleic Acid,Deoxyribose,All of above,A,8,Science
+"Area of circle formula?",πr²,πr,2πr,πd²,A,7,Math
+"Which ocean is largest?",Pacific,Atlantic,Indian,Arctic,A,6,Geography
+"Boiling point of water?",100°C,0°C,212°F,All of above,D,7,Science
+"2^3 = ?",6,8,10,12,B,5,Math
+"Photosynthesis equation?",CO2 + H2O → Glucose + O2,Glucose + O2 → CO2 + H2O,H2O + O2 → CO2 + Glucose,None,A,8,Science
+"Pythagoras theorem?",a² + b² = c²,a + b = c,a² - b² = c²,a² + b² > c²,A,7,Math
+"Continents on Earth?",5,6,7,8,C,6,Geography
+"Element symbol for Gold?",Au,Ag,Fe,Cu,A,7,Science
+"Perimeter of square?",4s,2s,s²,s,A,5,Math
+"Climate change cause?",Greenhouse gases,Volcanoes,Sun spots,None,A,8,Science
