@@ -152,28 +152,24 @@ def result():
             try:
                 for i in range(total):
                     user_ans = user_answers.get(str(i))
-                    if not user_ans:
-                        continue  # Unanswered = wrong
+                                    if user_ans:  # Only check if user answered
                     try:
                         cur.execute("SELECT correct_answer FROM questions WHERE id = ?", (q_ids[i],))
                         row = cur.fetchone()
                         if row and user_ans == row['correct_answer']:
                             score += 1
                     except:
-                        continue  # Skip bad question, don't crash
-            except:
-                pass  # Never crash on DB issue
+                        pass  # Skip any DB error for this question, don't add to score
             finally:
                 try:
                     conn.close()
                 except:
                     pass
 
-        session.clear()  # Clean session
+        session.clear()
         return render_template('result.html', score=score, total=total)
 
     except:
-        # Ultimate fallback — still show a result
         total = session.get('total', 0)
         session.clear()
         return render_template('result.html', score=0, total=total)
