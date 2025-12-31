@@ -75,3 +75,44 @@ else:
     # On Render: use the PORT env var and bind to 0.0.0.0
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+    from flask import Flask, render_template, request, redirect, url_for, flash
+import sqlite3
+import os
+
+# Add your existing imports if any (e.g., from check_db.py, etc.)
+# from check_db import something  # keep your imports
+
+app = Flask(__name__)
+app.secret_key = "your_secret_key"  # change this to something random
+
+# Your existing routes (KEEP ALL OF THEM UNCHANGED)
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
+
+@app.route("/analytical")
+def analytical():
+    return render_template("analytical.html")
+
+# Add ALL your other existing routes here exactly as they are
+# Examples (replace with your actual ones):
+# @app.route("/some_route")
+# def some_function():
+#     ...
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("error.html"), 404
+
+# === THIS IS THE ONLY NEW PART FOR RENDER.COM ===
+if __name__ == "__main__":
+    # This makes it work on Render (binds to 0.0.0.0 and uses $PORT)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)  # debug=False recommended for production
+# ================================================
+
+
